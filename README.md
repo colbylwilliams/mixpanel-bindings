@@ -1,6 +1,6 @@
 ## Mixpanel Bindings
 
-This is a set of Xamarin bindings for the [Mixpanel Android library][0] and [Mixpanel iOS SDK][1].
+This is a set of Xamarin bindings for the [Mixpanel Android library][0] and [Mixpanel iOS library][1].
 
 
 ## Building
