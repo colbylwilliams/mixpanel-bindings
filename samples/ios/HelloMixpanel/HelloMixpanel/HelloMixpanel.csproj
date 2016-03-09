@@ -87,13 +87,25 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Comment.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Like.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Like.imageset\speech_bubble-25.png" />
+    <ImageAsset Include="Assets.xcassets\Like.imageset\speech_bubble-50.png" />
+    <ImageAsset Include="Assets.xcassets\Comment.imageset\speech_bubble-25.png" />
+    <ImageAsset Include="Assets.xcassets\Comment.imageset\speech_bubble-50.png" />
+    <ImageAsset Include="Assets.xcassets\Like.imageset\like-25.png" />
+    <ImageAsset Include="Assets.xcassets\Like.imageset\like-50.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\Comment.imageset\" />
+    <Folder Include="Assets.xcassets\Like.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="HelloMixpanel.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -106,12 +118,40 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="TopNavViewController.cs" />
+    <Compile Include="TopNavViewController.designer.cs">
+      <DependentUpon>TopNavViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SomeTableViewController.cs" />
+    <Compile Include="SomeTableViewController.designer.cs">
+      <DependentUpon>SomeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MPTimingViewController.cs" />
+    <Compile Include="MPTimingViewController.designer.cs">
+      <DependentUpon>MPTimingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecretWhisperViewController.cs" />
+    <Compile Include="SecretWhisperViewController.designer.cs">
+      <DependentUpon>SecretWhisperViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecretTableViewCell.cs" />
+    <Compile Include="SecretTableViewCell.designer.cs">
+      <DependentUpon>SecretTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\bindings\ios\Mixpanel\Mixpanel\Mixpanel.csproj">
       <Project>{DACC1ACB-C07B-4179-AE49-1CE0650A9C09}</Project>
       <Name>Mixpanel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Settings.bundle\Root.plist" />
+    <BundleResource Include="Settings.bundle\en.lproj\Root.strings" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

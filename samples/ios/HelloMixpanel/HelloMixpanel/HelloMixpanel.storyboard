@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hNp-ZN-X3o">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Mixpanel-->
+        <scene sceneID="11a-pf-xlg">
+            <objects>
+                <navigationController title="Mixpanel" definesPresentationContext="YES" id="hNp-ZN-X3o" customClass="TopNavViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fFi-Lf-Pxu">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52156865600000002" green="0.58431375029999999" blue="0.7019608021" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NI7-ZD-d62" kind="relationship" relationship="rootViewController" id="wHa-S1-pYx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cgd-ct-eQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="399"/>
+        </scene>
+        <!--Track-->
+        <scene sceneID="ckf-tE-7LH">
+            <objects>
+                <viewController title="Track" id="Pml-vJ-orH" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nch-l5-MI7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oxc-b8-TYr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="714-c4-Om5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="no5-yi-4V1">
+                                <rect key="frame" x="57" y="270" width="206" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-segmentedControl-7Tp-Ub-ebv"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-eL-mkC">
+                                <rect key="frame" x="57" y="234" width="206" height="29"/>
+                                <segments>
+                                    <segment title="Axe"/>
+                                    <segment title="Sword"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-segmentedControl-fh9-Jr-Bv6"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P10-Wh-ufQ">
+                                <rect key="frame" x="57" y="176" width="206" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MAV-Zg-qtE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Set People Properties">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-B9v-xn-yg9"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setPeopleProperties:" destination="Pml-vJ-orH" eventType="touchUpInside" id="8ge-Vw-B7d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUN-k3-nAP">
+                                <rect key="frame" x="57" y="124" width="206" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Op7-rz-OKS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Track Event">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-sWT-bv-dFN"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trackEvent:" destination="Pml-vJ-orH" eventType="touchUpInside" id="ohm-2b-hB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="no5-yi-4V1" firstAttribute="top" secondItem="nch-l5-MI7" secondAttribute="bottom" constant="270" id="3gy-rb-CG6"/>
+                            <constraint firstAttribute="centerX" secondItem="P10-Wh-ufQ" secondAttribute="centerX" id="71P-Dn-UZO"/>
+                            <constraint firstAttribute="centerX" secondItem="no5-yi-4V1" secondAttribute="centerX" id="Hil-7f-mMS"/>
+                            <constraint firstItem="P10-Wh-ufQ" firstAttribute="top" secondItem="nch-l5-MI7" secondAttribute="bottom" constant="176" id="YP4-xu-o75"/>
+                            <constraint firstItem="NUN-k3-nAP" firstAttribute="top" secondItem="nch-l5-MI7" secondAttribute="bottom" constant="124" id="prV-Oe-5R7"/>
+                            <constraint firstItem="ReL-eL-mkC" firstAttribute="top" secondItem="nch-l5-MI7" secondAttribute="bottom" constant="234" id="rLl-hx-hM1"/>
+                            <constraint firstAttribute="centerX" secondItem="NUN-k3-nAP" secondAttribute="centerX" id="uiv-1H-oDX"/>
+                            <constraint firstAttribute="centerX" secondItem="ReL-eL-mkC" secondAttribute="centerX" id="zdA-yT-3xk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-a3f-yH-uFK"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="LCl-8h-pBh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fakeBackground" destination="oc5-V4-3pS" id="OGJ-Fo-u7t"/>
+                        <outlet property="genderControl" destination="no5-yi-4V1" id="Wg0-AH-RNi"/>
+                        <outlet property="weaponControl" destination="ReL-eL-mkC" id="VQz-nW-5LF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFA-Hi-ZYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="159"/>
+        </scene>
+        <!--Mixpanel-->
+        <scene sceneID="8M6-4C-OB8">
+            <objects>
+                <viewController title="Mixpanel" id="NI7-ZD-d62" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Viv-ae-elT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q5Z-S6-eVb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xP3-Xu-dor">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" image="4DF6E64C-3B9C-48BF-B449-E85145528BAF" translatesAutoresizingMaskIntoConstraints="NO" id="4bi-CI-U9X">
+                                <rect key="frame" x="127" y="122" width="66" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="DeP-Le-48O"/>
+                                    <constraint firstAttribute="width" constant="66" id="WUJ-C6-Uk0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-4FA-CV-aBK"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-A5-9hz">
+                                <rect key="frame" x="0.0" y="174" width="320" height="263"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="263" id="U56-kh-UPD"/>
+                                    <constraint firstAttribute="width" constant="320" id="vdB-Zq-gDi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-containerView-2M5-rd-zct"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="O4z-mJ-d6x" kind="embed" id="VFl-FA-eJ0"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4bi-CI-U9X" firstAttribute="top" secondItem="Viv-ae-elT" secondAttribute="bottom" constant="58" id="9Iu-rz-WZU"/>
+                            <constraint firstAttribute="centerY" secondItem="HXc-A5-9hz" secondAttribute="centerY" constant="-21.5" id="hJ6-yn-nYr"/>
+                            <constraint firstAttribute="centerX" secondItem="4bi-CI-U9X" secondAttribute="centerX" id="hWQ-xP-dST"/>
+                            <constraint firstItem="HXc-A5-9hz" firstAttribute="leading" secondItem="xP3-Xu-dor" secondAttribute="leading" id="mXl-3g-6Oe"/>
+                            <constraint firstAttribute="centerX" secondItem="HXc-A5-9hz" secondAttribute="centerX" id="uui-bd-AuT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-ZOq-C4-Zhh"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="2bg-G8-P88"/>
+                    <connections>
+                        <outlet property="pointsLabel" destination="LgH-OP-9Vh" id="zxe-0o-Xim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSI-Kw-da6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605" y="404"/>
+        </scene>
+        <!--No Image-->
+        <scene sceneID="Fmj-Kw-QVA">
+            <objects>
+                <viewController id="7Wl-ov-ae7" customClass="SomeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="t8W-3d-la1">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="7Wl-ov-ae7" id="ndg-gC-w0M"/>
+                            <outlet property="delegate" destination="7Wl-ov-ae7" id="CAj-Ad-r3s"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="No Image" id="lli-St-Wcc"/>
+                    <navigationItem key="navigationItem" id="SuN-7Y-jz2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUj-ka-Jbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4129" y="3941"/>
+        </scene>
+        <!--Timing View Controller-->
+        <scene sceneID="jAx-vi-Z1G">
+            <objects>
+                <viewController id="Zqn-Sf-Ge9" customClass="MPTimingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yY6-np-CN9"/>
+                        <viewControllerLayoutGuide type="bottom" id="aL3-eA-a5C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jfo-cm-0rx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0I-WO-J8e">
+                                <rect key="frame" x="71" y="202" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-5nz-Tb-Vkj"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="start:" destination="Zqn-Sf-Ge9" eventType="touchUpInside" id="IMW-9B-jQN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4z-Qi-cQE">
+                                <rect key="frame" x="215" y="202" width="37" height="30"/>
+                                <state key="normal" title="Track">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-NqI-JX-Jvq"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="track:" destination="Zqn-Sf-Ge9" eventType="touchUpInside" id="c75-CJ-0am"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wan-rX-a84">
+                                <rect key="frame" x="16" y="137" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-o9G-be-pXm"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81a-gJ-rsH">
+                                <rect key="frame" x="188" y="137" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-r5O-7G-aXQ"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-NpW-JY-l2t"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="YYD-5f-bYF"/>
+                    <connections>
+                        <outlet property="splitLabel" destination="81a-gJ-rsH" id="MuZ-9y-biF"/>
+                        <outlet property="timerLabel" destination="wan-rX-a84" id="spB-ue-suC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhZ-iq-HHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2172" y="-15.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="HAl-Cz-EkR">
+            <objects>
+                <tableViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="O4z-mJ-d6x" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fbE-nl-lDi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="i4n-33-4aZ">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="IzG-CH-oax" style="IBUITableViewCellStyleDefault" id="Lml-IG-zoV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lml-IG-zoV" id="Gt8-E2-G5U">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Track" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IzG-CH-oax">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-OC3-Xs-814"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Pml-vJ-orH" kind="push" id="kYS-So-TlG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Pqj-04-od8" style="IBUITableViewCellStyleDefault" id="A4s-m9-lmE">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A4s-m9-lmE" id="Wju-CS-Fkm">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Surveys" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pqj-04-od8">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-uzT-so-Vag"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dvO-bN-W5Z" kind="push" identifier="PushToSurveys" id="gLr-4r-9GG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CHW-UU-oRs" style="IBUITableViewCellStyleDefault" id="TCm-eW-mZb">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TCm-eW-mZb" id="jTF-j6-1Pl">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CHW-UU-oRs">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-CJv-3C-4Lz"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aWG-vw-iJ0" kind="push" identifier="PushToNotifications" id="BOK-ej-YAe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="0.0" textLabel="Iz9-tl-FGc" style="IBUITableViewCellStyleDefault" id="6V2-aq-RdA">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6V2-aq-RdA" id="QDv-g7-Dk0">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="A/B Testing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iz9-tl-FGc">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-D3f-sr-A1P"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="6C7-RS-Ugg" kind="push" identifier="PushToABTesting" id="7Xg-Aj-XUk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="tvr-t5-cxU" style="IBUITableViewCellStyleDefault" id="89f-rs-jhP">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="89f-rs-jhP" id="svR-sm-xgP">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Secret Whisper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tvr-t5-cxU">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-gob-lN-XRe"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="obU-y1-TWd" kind="push" identifier="PushToSecretWhisper" id="cEF-hD-ZLB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ahz-fC-YIa" style="IBUITableViewCellStyleDefault" id="c31-lv-7B0">
+                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c31-lv-7B0" id="t6Y-S7-Swy">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Timing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ahz-fC-YIa">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-1x8-g3-DoV"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Zqn-Sf-Ge9" kind="push" id="un5-BJ-2XY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="O4z-mJ-d6x" id="8tT-bi-9y2"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVt-Cn-i0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="621.5"/>
+        </scene>
+        <!--Secret Whisper-->
+        <scene sceneID="qND-WD-QyG">
+            <objects>
+                <viewController title="Secret Whisper" id="obU-y1-TWd" customClass="SecretWhisperViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lVf-0M-lMK"/>
+                        <viewControllerLayoutGuide type="bottom" id="aXo-Nq-bT8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Juh-KE-ywu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gda-L3-OIW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="331" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fgc-qT-Qau">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecretTableViewCell" rowHeight="331" id="zNa-Bc-gNc" customClass="SecretTableViewCell">
+                                                <rect key="frame" x="0.0" y="22" width="320" height="331"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="502" contentMode="center" tableViewCell="zNa-Bc-gNc" id="g0b-Un-qB6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="331"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" tag="510" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkT-Dm-Akh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-3DD-Pi-vPR"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <view alpha="0.40000000596046448" tag="509" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9O-cT-i3w">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-Thu-Zw-tR8"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="508" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="234" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-P9-1e3">
+                                                            <rect key="frame" x="43" y="89" width="234" height="135"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-qfn-h0-qcg"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="506" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="199-V0-wzq">
+                                                            <rect key="frame" x="20" y="295" width="151" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-qLB-wW-VU5"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QfT-jk-uaD">
+                                                            <rect key="frame" x="187" y="279" width="133" height="46"/>
+                                                            <subviews>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVt-pV-6XW">
+                                                                    <rect key="frame" x="95" y="15" width="18" height="15"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-GHt-bA-ifl"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiy-rH-CiG">
+                                                                    <rect key="frame" x="31" y="15" width="18" height="15"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-0NX-Kc-dAd"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </label>
+                                                                <imageView userInteractionEnabled="NO" tag="501" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Like" translatesAutoresizingMaskIntoConstraints="NO" id="w8D-dD-i32">
+                                                                    <rect key="frame" x="0.0" y="10" width="25" height="25"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-Ll7-cp-5eb"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" tag="500" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Comment" translatesAutoresizingMaskIntoConstraints="NO" id="skj-ld-DFk">
+                                                                    <rect key="frame" x="62" y="10" width="25" height="25"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-D9Y-dT-PPO"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-E9k-R0-DEe"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="backgroundImage" destination="VkT-Dm-Akh" id="lZz-zW-8dm"/>
+                                                    <outlet property="commentsLabel" destination="qiy-rH-CiG" id="Mfn-41-CZ0"/>
+                                                    <outlet property="contentLabel" destination="dwa-P9-1e3" id="v5o-E3-L5L"/>
+                                                    <outlet property="likeslabel" destination="xVt-pV-6XW" id="cgi-sZ-mfJ"/>
+                                                    <outlet property="locationLabel" destination="199-V0-wzq" id="9Jx-xS-Qdf"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-tableView-Ame-u7-eQE"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="obU-y1-TWd" id="Qrz-Pe-d5u"/>
+                                            <outlet property="delegate" destination="obU-y1-TWd" id="vXK-B1-QTa"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-scrollView-Yoj-6C-wSB"/>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gda-L3-OIW" firstAttribute="leading" secondItem="Juh-KE-ywu" secondAttribute="leading" id="DC7-KW-C0p"/>
+                            <constraint firstAttribute="bottom" secondItem="gda-L3-OIW" secondAttribute="bottom" id="LZQ-Bd-efh"/>
+                            <constraint firstAttribute="trailing" secondItem="gda-L3-OIW" secondAttribute="trailing" id="PlQ-dy-wHG"/>
+                            <constraint firstItem="gda-L3-OIW" firstAttribute="top" secondItem="Juh-KE-ywu" secondAttribute="top" id="oW6-KI-DJd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-KoZ-1W-1qx"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uvc-HL-sbv"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Z1-bw-3hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037" y="1119"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="qhq-Zh-Iqm">
+            <objects>
+                <viewController title="Notifications" id="aWG-vw-iJ0" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tWT-As-Q26"/>
+                        <viewControllerLayoutGuide type="bottom" id="HVj-mj-dTJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NkR-Uk-EFr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lOe-jr-Dft">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-jGo-oH-Gk5"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3h-QB-mwC">
+                                <rect key="frame" x="70" y="239" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Kyz-LC-ruR"/>
+                                    <constraint firstAttribute="height" constant="21" id="tyx-nj-DD8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Change Background">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-hvb-ez-zdi"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeBackground" destination="dvO-bN-W5Z" eventType="touchUpInside" id="Lcl-NI-g6h"/>
+                                    <action selector="changeBackground" destination="aWG-vw-iJ0" eventType="touchUpInside" id="Yzb-cb-LW7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s10-tV-QlZ">
+                                <rect key="frame" x="70" y="161" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7d0-m4-nFN"/>
+                                    <constraint firstAttribute="width" constant="180" id="bFa-Qm-AdV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Show Notification">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-e9B-Gc-zhT"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showNotif:" destination="aWG-vw-iJ0" eventType="touchUpInside" id="qJl-ji-1dY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Notif ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-7A-5lb">
+                                <rect key="frame" x="125" y="113" width="70" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Survey Name" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b8m-YE-GqT"/>
+                                    <constraint firstAttribute="width" constant="70" id="b9y-40-mIY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-textField-auC-4E-3iO"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7lf-qq-Wcb">
+                                <rect key="frame" x="48" y="67" width="225" height="29"/>
+                                <segments>
+                                    <segment title="Takeover Notif"/>
+                                    <segment title="Mini Notification"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-segmentedControl-Ews-8i-K8A"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setNotificationType:" destination="aWG-vw-iJ0" eventType="valueChanged" id="aia-R3-s8a"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxk-Ty-IWt">
+                                <rect key="frame" x="70" y="200" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GvR-Lz-eg7"/>
+                                    <constraint firstAttribute="width" constant="180" id="SzA-EM-crP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Change Header Color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-MlX-fN-pFo"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeColor" destination="aWG-vw-iJ0" eventType="touchUpInside" id="6VI-EN-PGM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lOe-jr-Dft" secondAttribute="centerX" id="5uR-TX-Sx3"/>
+                            <constraint firstItem="s10-tV-QlZ" firstAttribute="top" secondItem="gNs-7A-5lb" secondAttribute="bottom" constant="18" id="Af0-si-Gdd"/>
+                            <constraint firstItem="gNs-7A-5lb" firstAttribute="top" secondItem="7lf-qq-Wcb" secondAttribute="bottom" constant="18" id="Fxs-bs-2al"/>
+                            <constraint firstItem="7lf-qq-Wcb" firstAttribute="top" secondItem="tWT-As-Q26" secondAttribute="bottom" constant="67" id="JHk-0N-faC"/>
+                            <constraint firstAttribute="centerX" secondItem="s10-tV-QlZ" secondAttribute="centerX" id="PpP-c9-9zT"/>
+                            <constraint firstItem="lOe-jr-Dft" firstAttribute="top" secondItem="NkR-Uk-EFr" secondAttribute="top" id="Q9H-9F-IxF"/>
+                            <constraint firstAttribute="centerX" secondItem="gNs-7A-5lb" secondAttribute="centerX" id="QJj-4O-1cc"/>
+                            <constraint firstAttribute="trailing" secondItem="lOe-jr-Dft" secondAttribute="trailing" id="XFe-0T-8Vl"/>
+                            <constraint firstAttribute="centerX" secondItem="B3h-QB-mwC" secondAttribute="centerX" id="ZIh-W4-yYI"/>
+                            <constraint firstItem="Xxk-Ty-IWt" firstAttribute="top" secondItem="s10-tV-QlZ" secondAttribute="bottom" constant="18" id="h7h-7g-WZ1"/>
+                            <constraint firstItem="B3h-QB-mwC" firstAttribute="top" secondItem="Xxk-Ty-IWt" secondAttribute="bottom" constant="18" id="hwR-zr-LR5"/>
+                            <constraint firstAttribute="centerX" secondItem="7lf-qq-Wcb" secondAttribute="centerX" id="nWb-JG-jmx"/>
+                            <constraint firstAttribute="centerX" secondItem="Xxk-Ty-IWt" secondAttribute="centerX" id="neh-Cl-5Lb"/>
+                            <constraint firstItem="HVj-mj-dTJ" firstAttribute="top" secondItem="lOe-jr-Dft" secondAttribute="bottom" id="vol-5V-Zs9"/>
+                            <constraint firstItem="lOe-jr-Dft" firstAttribute="leading" secondItem="NkR-Uk-EFr" secondAttribute="leading" id="xNn-RX-1FK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-Efi-Hy-TDA"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q4q-y1-vP0"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fakeBackground" destination="lOe-jr-Dft" id="oYT-t5-wTp"/>
+                        <outlet property="notificationIDField" destination="gNs-7A-5lb" id="kb5-8Y-mvk"/>
+                        <outlet property="notificationTypeControl" destination="7lf-qq-Wcb" id="npZ-Iu-Ny9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZV-He-E4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="1697"/>
+        </scene>
+        <!--Surveys-->
+        <scene sceneID="tCc-sS-G9W">
+            <objects>
+                <viewController title="Surveys" id="dvO-bN-W5Z" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wPD-1R-VJi"/>
+                        <viewControllerLayoutGuide type="bottom" id="CqL-sL-J83"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5na-MN-km5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-V4-3pS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-Fgb-VT-EoI"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEB-Vh-pBz">
+                                <rect key="frame" x="110" y="145" width="101" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Lgk-de-w3n"/>
+                                    <constraint firstAttribute="height" constant="33" id="PcG-RV-vdC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Show Survey">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-COD-d8-YAj"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showSurvey:" destination="dvO-bN-W5Z" eventType="touchUpInside" id="UbX-73-bdK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Survey ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMX-8L-j6P">
+                                <rect key="frame" x="93" y="97" width="135" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Survey Name" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Hvu-12-qCB"/>
+                                    <constraint firstAttribute="height" constant="30" id="PJx-Of-hsf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-textField-KGy-u2-8IA"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-oN-Ghn">
+                                <rect key="frame" x="82" y="196" width="158" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Change Background">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-eUS-cV-cyG"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeBackground" destination="dvO-bN-W5Z" eventType="touchUpInside" id="UsA-0Y-aue"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LEB-Vh-pBz" firstAttribute="top" secondItem="tMX-8L-j6P" secondAttribute="bottom" constant="18" id="7AH-ej-lTq"/>
+                            <constraint firstItem="oc5-V4-3pS" firstAttribute="leading" secondItem="5na-MN-km5" secondAttribute="leading" id="CUP-f7-u1a"/>
+                            <constraint firstAttribute="bottom" secondItem="oc5-V4-3pS" secondAttribute="bottom" id="DBW-VF-SEK"/>
+                            <constraint firstItem="fEd-oN-Ghn" firstAttribute="top" secondItem="LEB-Vh-pBz" secondAttribute="bottom" constant="18" id="Jpr-jd-00M"/>
+                            <constraint firstAttribute="trailing" secondItem="oc5-V4-3pS" secondAttribute="trailing" id="O0V-CC-a9y"/>
+                            <constraint firstAttribute="centerX" secondItem="tMX-8L-j6P" secondAttribute="centerX" constant="-0.5" id="R1P-pV-0WD"/>
+                            <constraint firstItem="oc5-V4-3pS" firstAttribute="top" secondItem="5na-MN-km5" secondAttribute="top" id="ac1-zK-nuk"/>
+                            <constraint firstAttribute="centerX" secondItem="LEB-Vh-pBz" secondAttribute="centerX" id="dO1-YL-pCd"/>
+                            <constraint firstItem="tMX-8L-j6P" firstAttribute="top" secondItem="wPD-1R-VJi" secondAttribute="bottom" constant="97" id="okr-z2-BWM"/>
+                            <constraint firstAttribute="centerX" secondItem="fEd-oN-Ghn" secondAttribute="centerX" constant="-0.5" id="r2z-ii-T0v"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-E6D-ZK-Rsw"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="F1p-pl-098"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="fakeBackground" destination="oc5-V4-3pS" id="NBB-s2-NMo"/>
+                        <outlet property="surveyIDField" destination="tMX-8L-j6P" id="y6F-vR-yPN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZP-RQ-gsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="933"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jCs-6c-NTU">
+            <objects>
+                <viewController id="j4g-o1-9ar" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8y9-4o-pir"/>
+                        <viewControllerLayoutGuide type="bottom" id="vF9-CG-uIx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Krx-hg-sU3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-uQ-O3M">
+                                <rect key="frame" x="133" y="269" width="54" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-CoZ-lb-2Y5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="gly-Jb-rzl" kind="unwind" unwindAction="dismissModal:" id="Aoe-Q9-YXr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label with constraints" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-VE-vdq">
+                                <rect key="frame" x="76" y="343" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-AZb-DT-cbh"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constraints" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAd-KE-3oB">
+                                <rect key="frame" x="157" y="487" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-VVc-oe-1mi"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="yKc-uQ-O3M" secondAttribute="centerY" id="9HL-Lq-JrI"/>
+                            <constraint firstItem="vF9-CG-uIx" firstAttribute="top" secondItem="MAd-KE-3oB" secondAttribute="bottom" constant="60" id="GEC-QI-HDu"/>
+                            <constraint firstItem="yKc-uQ-O3M" firstAttribute="top" secondItem="lM0-VE-vdq" secondAttribute="top" constant="-74" id="JgX-gx-0QQ"/>
+                            <constraint firstAttribute="centerX" secondItem="yKc-uQ-O3M" secondAttribute="centerX" id="hew-IV-XJI"/>
+                            <constraint firstItem="lM0-VE-vdq" firstAttribute="trailing" secondItem="MAd-KE-3oB" secondAttribute="trailing" id="xqt-yV-DMr"/>
+                            <constraint firstItem="yKc-uQ-O3M" firstAttribute="centerX" secondItem="lM0-VE-vdq" secondAttribute="centerX" constant="-0.5" id="yRF-UB-AnE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-TYM-pE-XP3"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="WlN-tg-sX8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igf-4l-WIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gly-Jb-rzl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3325" y="2008"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0ty-OX-2Zj">
+            <objects>
+                <viewController id="brl-k1-BRb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IFH-M3-AhT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFM-mL-Gb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zf1-fP-9lX">
+                        <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Text That is quiet long so it truncates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfs-Yi-73U">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-sEU-Eo-c2O"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBg-sc-qy2">
+                                <rect key="frame" x="83" y="49" width="155" height="30"/>
+                                <state key="normal" title="Button with a long title">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-tvE-69-z87"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jpf-rm-tpM" kind="unwind" unwindAction="popToViewController:" id="fTh-qc-Uc7"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="A18-dG-OTC">
+                                <rect key="frame" x="192" y="138" width="94" height="29"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-stepper-l3e-1K-yxm"/>
+                                </userDefinedRuntimeAttributes>
+                            </stepper>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4h-OK-B0k">
+                                <rect key="frame" x="251" y="86" width="51" height="31"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-switch-OAo-lJ-2UW"/>
+                                </userDefinedRuntimeAttributes>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7M7-I7-ZV5">
+                                <rect key="frame" x="177" y="175" width="123" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-segmentedControl-YWo-CI-4Ue"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9wS-jl-7dn">
+                                <rect key="frame" x="162" y="83" width="39" height="37"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-pageControl-HV0-wq-yAr"/>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dea-Pr-IPn">
+                                <rect key="frame" x="214" y="92" width="20" height="20"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-activityIndicatorView-NPd-jX-jFD"/>
+                                </userDefinedRuntimeAttributes>
+                            </activityIndicatorView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bJc-3N-lju">
+                                <rect key="frame" x="18" y="87" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="GaU-RX-y0p"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-slider-b5o-qo-utS"/>
+                                </userDefinedRuntimeAttributes>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QKT-ns-KKF">
+                                <rect key="frame" x="20" y="212" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-textField-WGL-p3-qsV"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Oo-pd-wCo">
+                                <rect key="frame" x="20" y="138" width="114" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="gsq-nG-85g"/>
+                                    <constraint firstAttribute="width" constant="114" id="kaE-Nf-Z68"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-2eg-IF-Xil"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T52-hw-GmS">
+                                <rect key="frame" x="20" y="250" width="280" height="39"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Lorem">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ipsum">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> dolor sit er elit lamet. 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Consectetaur">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="18" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> cillium adipisicing pecu, sed do eiusmod tempor.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-textView-vEu-bG-WjU"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gZL-MM-0CV">
+                                <rect key="frame" x="20" y="10" width="280" height="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-progressView-YgV-bM-dil"/>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mkQ-N9-umM">
+                                <rect key="frame" x="20" y="297" width="280" height="84"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="0KJ-CA-lbH">
+                                        <rect key="frame" x="142" y="59" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-Ic0-nQ-pO0"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="mJE-OE-PS7">
+                                        <rect key="frame" x="20" y="207" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-lk0-c2-IY4"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-is-3We">
+                                        <rect key="frame" x="20" y="133" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-2ea-yO-MGd"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-Hc-6r1">
+                                        <rect key="frame" x="20" y="-15" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-VFe-LA-PqL"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwK-Ct-I1T">
+                                        <rect key="frame" x="264" y="59" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-LXv-uv-kJO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="WUB-vC-dwx">
+                                        <rect key="frame" x="20" y="281" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-A4d-vV-HyT"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-Mz-OhE">
+                                        <rect key="frame" x="20" y="59" width="114" height="66"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-glx-IE-ECo"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="R8j-Fq-Ea9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-scrollView-4jt-Cl-MVK"/>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7M7-I7-ZV5" firstAttribute="top" secondItem="A18-dG-OTC" secondAttribute="bottom" constant="8" id="0au-w1-HK2"/>
+                            <constraint firstAttribute="trailing" secondItem="Qfs-Yi-73U" secondAttribute="trailing" constant="20" id="1CP-rI-Uah"/>
+                            <constraint firstItem="f4h-OK-B0k" firstAttribute="top" secondItem="Zf1-fP-9lX" secondAttribute="top" constant="86" id="2B8-nr-9xU"/>
+                            <constraint firstAttribute="centerX" secondItem="vBg-sc-qy2" secondAttribute="centerX" id="5wj-Lc-JO7"/>
+                            <constraint firstItem="QKT-ns-KKF" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="CGg-aa-COY"/>
+                            <constraint firstItem="mkQ-N9-umM" firstAttribute="top" secondItem="T52-hw-GmS" secondAttribute="bottom" constant="8" id="D7u-b0-1TN"/>
+                            <constraint firstAttribute="trailing" secondItem="T52-hw-GmS" secondAttribute="trailing" constant="20" id="Dmd-d4-D0t"/>
+                            <constraint firstItem="f4h-OK-B0k" firstAttribute="leading" secondItem="dea-Pr-IPn" secondAttribute="trailing" constant="17" id="EqW-zk-kjX"/>
+                            <constraint firstItem="9Oo-pd-wCo" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="EyY-zj-8h3"/>
+                            <constraint firstItem="Qfs-Yi-73U" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="GDH-wK-KI1"/>
+                            <constraint firstItem="f4h-OK-B0k" firstAttribute="centerY" secondItem="dea-Pr-IPn" secondAttribute="centerY" id="Ixo-3N-POa"/>
+                            <constraint firstItem="T52-hw-GmS" firstAttribute="top" secondItem="QKT-ns-KKF" secondAttribute="bottom" constant="8" id="JIc-IK-kF0"/>
+                            <constraint firstItem="A18-dG-OTC" firstAttribute="top" secondItem="9Oo-pd-wCo" secondAttribute="top" id="JQP-rq-VJL"/>
+                            <constraint firstItem="mkQ-N9-umM" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="KLR-UA-QwN"/>
+                            <constraint firstItem="bJc-3N-lju" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="Ma3-GH-ITr"/>
+                            <constraint firstItem="gZL-MM-0CV" firstAttribute="top" secondItem="Zf1-fP-9lX" secondAttribute="top" constant="10" id="Nj1-wx-FHa"/>
+                            <constraint firstAttribute="bottom" secondItem="mkQ-N9-umM" secondAttribute="bottom" constant="6" id="O2v-ad-Q06"/>
+                            <constraint firstAttribute="trailing" secondItem="7M7-I7-ZV5" secondAttribute="trailing" constant="20" id="TZP-Ev-qcQ"/>
+                            <constraint firstAttribute="trailing" secondItem="gZL-MM-0CV" secondAttribute="trailing" constant="20" id="UEJ-Dk-WVu"/>
+                            <constraint firstItem="9Oo-pd-wCo" firstAttribute="top" secondItem="Zf1-fP-9lX" secondAttribute="top" constant="138" id="WfJ-tm-pU1"/>
+                            <constraint firstAttribute="trailing" secondItem="mkQ-N9-umM" secondAttribute="trailing" constant="20" id="Z46-9q-n3K"/>
+                            <constraint firstItem="dea-Pr-IPn" firstAttribute="leading" secondItem="9wS-jl-7dn" secondAttribute="trailing" constant="13" id="adP-Ip-wOK"/>
+                            <constraint firstItem="T52-hw-GmS" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="d4r-5D-nlu"/>
+                            <constraint firstItem="Qfs-Yi-73U" firstAttribute="top" secondItem="Zf1-fP-9lX" secondAttribute="top" constant="20" id="dQE-C7-3YZ"/>
+                            <constraint firstItem="gZL-MM-0CV" firstAttribute="leading" secondItem="Zf1-fP-9lX" secondAttribute="leading" constant="20" id="iaL-Na-nzK"/>
+                            <constraint firstItem="A18-dG-OTC" firstAttribute="centerX" secondItem="7M7-I7-ZV5" secondAttribute="centerX" id="lZR-Jt-izz"/>
+                            <constraint firstItem="bJc-3N-lju" firstAttribute="top" secondItem="vBg-sc-qy2" secondAttribute="bottom" constant="8" id="mJG-U9-pjj"/>
+                            <constraint firstItem="QKT-ns-KKF" firstAttribute="top" secondItem="9Oo-pd-wCo" secondAttribute="bottom" constant="8" id="mJG-ia-pz5"/>
+                            <constraint firstItem="9wS-jl-7dn" firstAttribute="centerY" secondItem="dea-Pr-IPn" secondAttribute="centerY" id="ppH-oo-rsF"/>
+                            <constraint firstAttribute="trailing" secondItem="QKT-ns-KKF" secondAttribute="trailing" constant="20" id="rDh-Pz-vxE"/>
+                            <constraint firstAttribute="trailing" secondItem="f4h-OK-B0k" secondAttribute="trailing" constant="20" id="v68-ha-5sj"/>
+                            <constraint firstItem="9wS-jl-7dn" firstAttribute="leading" secondItem="bJc-3N-lju" secondAttribute="trailing" constant="28" id="wdc-QD-vKI"/>
+                            <constraint firstItem="vBg-sc-qy2" firstAttribute="top" secondItem="Zf1-fP-9lX" secondAttribute="top" constant="49" id="yJw-g5-yJV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-18S-Ud-lQo"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="SQ7-l8-JyV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="au6-rX-yBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jpf-rm-tpM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4129" y="1964"/>
+        </scene>
+        <!--Kitchen Sink-->
+        <scene sceneID="sGa-hs-Ai3">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="0kt-RO-mla" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Kitchen Sink" id="4x8-py-hYE"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="PRM-fO-qOU">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="brl-k1-BRb" kind="relationship" relationship="viewControllers" id="UBr-fD-DQy"/>
+                        <segue destination="dmf-LM-usD" kind="relationship" relationship="viewControllers" id="9Mc-Ow-fFg"/>
+                        <segue destination="ldu-qt-Lkl" kind="relationship" relationship="viewControllers" id="kZO-eV-Dcq"/>
+                        <segue destination="7Wl-ov-ae7" kind="relationship" relationship="viewControllers" id="5Mz-rL-g6F"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Li5-GP-j0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3325" y="2671"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LPl-rb-Yyi">
+            <objects>
+                <viewController id="ldu-qt-Lkl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bf3-4B-sy9"/>
+                        <viewControllerLayoutGuide type="bottom" id="AlQ-Mg-VM2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zeX-tf-nnQ">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ktk-Sp-DSM">
+                                <rect key="frame" x="104" y="40" width="113" height="114"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-WSs-Ky-nqr"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PpS-iY-wBj" appends="YES" id="FkE-EX-eJ3"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap Image To Pop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH6-0g-uGz">
+                                <rect key="frame" x="91" y="179" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-HZR-6g-hwG"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-6r-W0y">
+                                <rect key="frame" x="40" y="222" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-textView-wU4-Io-JY0"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-j3u-St-RHl"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="HAW-iX-ZxT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mA6-wn-PLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="s0C-dG-dKO" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="PpS-iY-wBj">
+                    <connections>
+                        <segue destination="s0C-dG-dKO" kind="unwind" unwindAction="popToViewController:" id="tfb-yo-YMa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4129" y="3289"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="O1f-xk-cb0">
+            <objects>
+                <viewController id="dmf-LM-usD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sCA-mA-Wa8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FCP-av-D01"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q9F-ZW-7Gf">
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="64a-gF-lOZ">
+                                <rect key="frame" x="20" y="20" width="280" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="uwQ-yq-iI8"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="421182925.38498503">
+                                    <!--2014-05-07 19:15:25 +0000-->
+                                </date>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-datePicker-UuK-VJ-VGn"/>
+                                </userDefinedRuntimeAttributes>
+                            </datePicker>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QbB-cY-nV9">
+                                <rect key="frame" x="20" y="190" width="280" height="92"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-mapView-hNP-yy-hAs"/>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nx-jC-o8r">
+                                <rect key="frame" x="20" y="290" width="280" height="90"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="UaM-Mi-uc7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-webView-K8q-lR-j0l"/>
+                                </userDefinedRuntimeAttributes>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Nx-jC-o8r" firstAttribute="leading" secondItem="q9F-ZW-7Gf" secondAttribute="leading" constant="20" id="5rN-7s-qOk"/>
+                            <constraint firstItem="64a-gF-lOZ" firstAttribute="top" secondItem="q9F-ZW-7Gf" secondAttribute="top" constant="20" id="92M-xI-ZIP"/>
+                            <constraint firstItem="QbB-cY-nV9" firstAttribute="top" secondItem="64a-gF-lOZ" secondAttribute="bottom" constant="8" id="DeC-Ul-cK9"/>
+                            <constraint firstAttribute="trailing" secondItem="64a-gF-lOZ" secondAttribute="trailing" constant="20" id="G4q-35-lyD"/>
+                            <constraint firstItem="64a-gF-lOZ" firstAttribute="leading" secondItem="q9F-ZW-7Gf" secondAttribute="leading" constant="20" id="ML2-A9-Swu"/>
+                            <constraint firstAttribute="bottom" secondItem="3Nx-jC-o8r" secondAttribute="bottom" constant="56" id="Y7T-4X-3Ul"/>
+                            <constraint firstAttribute="trailing" secondItem="3Nx-jC-o8r" secondAttribute="trailing" constant="20" id="cbA-E4-r5E"/>
+                            <constraint firstItem="QbB-cY-nV9" firstAttribute="leading" secondItem="q9F-ZW-7Gf" secondAttribute="leading" constant="20" id="gkc-tH-KsE"/>
+                            <constraint firstItem="3Nx-jC-o8r" firstAttribute="top" secondItem="QbB-cY-nV9" secondAttribute="bottom" constant="8" id="t0p-uM-2Br"/>
+                            <constraint firstAttribute="trailing" secondItem="QbB-cY-nV9" secondAttribute="trailing" constant="20" id="zJ4-Op-Qy0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-haZ-lR-k6D"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Mp9-WI-nv5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akl-fe-rad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4129" y="2671"/>
+        </scene>
+        <!--A/B Testing-->
+        <scene sceneID="TLs-W0-aBg">
+            <objects>
+                <viewController title="A/B Testing" id="6C7-RS-Ugg" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEh-Lt-aM9"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpV-LS-Ua7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ktb-HQ-sc1">
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dou-7r-CK1">
+                                <rect key="frame" x="101" y="49" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-4xb-bA-KXH"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICY-T7-gU3">
+                                <rect key="frame" x="82" y="334" width="156" height="30"/>
+                                <state key="normal" title="Present Modal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-SNk-YS-2S2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="j4g-o1-9ar" kind="modal" identifier="PresentModal" id="ec4-Ss-OYd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVi-AV-Dvy">
+                                <rect key="frame" x="82" y="372" width="156" height="30"/>
+                                <state key="normal" title="Push Kitchen Sink">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-Ale-TE-MhX"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="0kt-RO-mla" kind="push" identifier="PushToKitchenSink" id="75C-Wo-jS8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-OP-9Vh">
+                                <rect key="frame" x="103" y="86" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-label-2FA-bp-70L"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvr-Q2-NMj">
+                                <rect key="frame" x="95" y="410" width="131" height="30"/>
+                                <state key="normal" title="Join available tests">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-button-yP3-UX-Czn"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="joinExperiments:" destination="6C7-RS-Ugg" eventType="touchUpInside" id="HLO-41-4k5"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rip-xX-yyf">
+                                <rect key="frame" x="104" y="132" width="113" height="114"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-imageView-yls-NG-mD4"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="mixpanelViewId" value="mp-view-mJf-JM-fE2"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="A/B Testing" id="Sax-ug-hsD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dwa-0y-yo4">
+                            <connections>
+                                <action selector="testBarButtonItemWasPressed:" destination="6C7-RS-Ugg" id="AZe-cG-8bH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pointsLabel" destination="LgH-OP-9Vh" id="rF0-KI-8OP"/>
+                        <outlet property="textLabel" destination="dou-7r-CK1" id="yQu-CS-BUv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVy-KQ-xzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2830" y="2418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="4DF6E64C-3B9C-48BF-B449-E85145528BAF" width="25" height="25"/>
+        <image name="Comment" width="25" height="25"/>
+        <image name="Icon.png" width="25" height="25"/>
+        <image name="Like" width="25" height="25"/>
+    </resources>
+</document>

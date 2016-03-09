@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mixpanel
+namespace MixpanelBinding
 {
 }
 

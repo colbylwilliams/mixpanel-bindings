@@ -5,7 +5,7 @@ using Foundation;
 using ObjCRuntime;
 // using CoreGraphics;
 
-namespace Mixpanel
+namespace MixpanelBinding
 {
 	// @interface Mixpanel : NSObject
 	[BaseType (typeof (NSObject))]

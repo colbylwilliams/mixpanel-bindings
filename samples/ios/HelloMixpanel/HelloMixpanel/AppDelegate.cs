@@ -1,7 +1,7 @@
 ﻿using System;
 using Foundation;
 using UIKit;
-using Mixpanel;
+using MixpanelBinding;
 using CoreFoundation;
 
 namespace HelloMixpanel
@@ -14,11 +14,12 @@ namespace HelloMixpanel
 		const string _mixpanelTokenKey = "mixpanelToken";
 
 		// IMPORTANT!!! replace with you api token from https://mixpanel.com/account/
-		const string MIXPANEL_TOKEN = @"YOUR_MIXPANEL_PROJECT_TOKEN";
+		// const string MIXPANEL_TOKEN = "YOUR_MIXPANEL_PROJECT_TOKEN";
+		const string MIXPANEL_TOKEN = "fd506b4c1c6426c57c0dbea08dca7aee";
 
 		DateTime startTime;
 
-		Mixpanel.Mixpanel mixpanel;
+		public Mixpanel mixpanel { get; set; }
 
 		nint bgTask;
 
@@ -30,24 +31,26 @@ namespace HelloMixpanel
 
 			var mixpanelToken = NSUserDefaults.StandardUserDefaults.StringForKey (_mixpanelTokenKey);
 
-			if (string.IsNullOrEmpty (mixpanelToken) || mixpanelToken.Equals (MIXPANEL_TOKEN, StringComparison.OrdinalIgnoreCase)) {
+			Window.MakeKeyAndVisible ();
+
+			if (string.IsNullOrEmpty (mixpanelToken) || mixpanelToken.Equals ("YOUR_MIXPANEL_PROJECT_TOKEN", StringComparison.OrdinalIgnoreCase)) {
 
 #if DEBUG
-				/*
-				UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Mixpanel Token Required" message:@"Go to Settings > Mixpanel and add your project's token" preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-            }]];
-            [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
-				*/
+				var alert = UIAlertController.Create ("Mixpanel Token Required", "Go to Settings > Mixpanel and add your project's token", UIAlertControllerStyle.Alert);
 
+				alert.AddAction (UIAlertAction.Create ("Okay", UIAlertActionStyle.Default, (obj) => UIApplication.SharedApplication.OpenUrl (NSUrl.FromString (UIApplication.OpenSettingsUrlString))));
+
+				Window.RootViewController.PresentViewController (alert, true, null);
+
+				return true;
 
 #endif
 
 			} else {
 
 				// Initialize the MixpanelAPI object
-				mixpanel = Mixpanel.Mixpanel.SharedInstanceWithToken (mixpanelToken, launchOptions);
+				mixpanel = Mixpanel.SharedInstanceWithToken (mixpanelToken, launchOptions);
+				Console.WriteLine (mixpanel);
 			}
 
 
@@ -83,7 +86,7 @@ namespace HelloMixpanel
 
 			var seconds = DateTime.Now.Subtract (startTime).TotalSeconds;
 
-			Mixpanel.Mixpanel.SharedInstance.Track ("Session", NSDictionary.FromObjectAndKey (new NSString ("Length"), NSNumber.FromDouble (seconds)));
+			Mixpanel.SharedInstance?.Track ("Session", NSDictionary.FromObjectAndKey (new NSString ("Length"), NSNumber.FromDouble (seconds)));
 		}
 
 		public override void DidEnterBackground (UIApplication application)
@@ -100,11 +103,11 @@ namespace HelloMixpanel
 				Console.WriteLine ("Starting background task {0}", bgTask);
 
 				// track some events and set some people properties
-				var mixpanel = Mixpanel.Mixpanel.SharedInstance;
+				var mixpanel = Mixpanel.SharedInstance;
 
-				mixpanel.RegisterSuperProperties (NSDictionary.FromObjectAndKey (new NSString ("Background Super Property"), new NSString ("Hi!")));
-				mixpanel.Track ("Background Event");
-				mixpanel.People.Set ("Background Property", new NSDate ());
+				mixpanel?.RegisterSuperProperties (NSDictionary.FromObjectAndKey (new NSString ("Background Super Property"), new NSString ("Hi!")));
+				mixpanel?.Track ("Background Event");
+				mixpanel?.People.Set ("Background Property", new NSDate ());
 
 				Console.WriteLine ("Ending background task {0}", bgTask);
 				application.EndBackgroundTask (bgTask);
